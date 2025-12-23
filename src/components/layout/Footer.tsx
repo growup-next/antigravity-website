@@ -90,13 +90,42 @@ export default function Footer() {
                         </address>
                     </div>
 
-                    <nav className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-zinc-600">
-                        <Link href="#" className="hover:text-black transition-colors">私たちの想い</Link>
-                        <Link href="#" className="hover:text-black transition-colors">事業案内</Link>
-                        <Link href="#" className="hover:text-black transition-colors">選ばれる理由</Link>
-                        <Link href="#" className="hover:text-black transition-colors">実績・事例</Link>
-                        <Link href="#" className="hover:text-black transition-colors">会社案内</Link>
-                        <Link href="#" className="hover:text-black transition-colors">プライバシーポリシー</Link>
+                    <nav className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-12 gap-y-8 text-sm">
+                        <div className="space-y-4">
+                            <h4 className="font-bold text-zinc-900">Vision</h4>
+                            <ul className="space-y-2 text-zinc-600">
+                                <li><Link href="/mission" className="hover:text-orange-600 transition-colors">私たちの想い</Link></li>
+                            </ul>
+                        </div>
+                        <div className="space-y-4">
+                            <h4 className="font-bold text-zinc-900">Service</h4>
+                            <ul className="space-y-2 text-zinc-600">
+                                <li><Link href="/service" className="hover:text-orange-600 transition-colors">事業案内</Link></li>
+                                <li><Link href="/service/training" className="hover:text-orange-600 transition-colors">デジタル人材育成・研修</Link></li>
+                                <li><Link href="/service/marketing" className="hover:text-orange-600 transition-colors">Webマーケティング</Link></li>
+                            </ul>
+                        </div>
+                        <div className="space-y-4">
+                            <h4 className="font-bold text-zinc-900">Case Study</h4>
+                            <ul className="space-y-2 text-zinc-600">
+                                <li><Link href="/case-study" className="hover:text-orange-600 transition-colors">実績・事例</Link></li>
+                            </ul>
+                        </div>
+                        <div className="space-y-4">
+                            <h4 className="font-bold text-zinc-900">About Us</h4>
+                            <ul className="space-y-2 text-zinc-600">
+                                <li><Link href="/about" className="hover:text-orange-600 transition-colors">会社案内</Link></li>
+                                <li><Link href="/about/company" className="hover:text-orange-600 transition-colors">会社概要</Link></li>
+                                <li><Link href="/about/message" className="hover:text-orange-600 transition-colors">代表あいさつ</Link></li>
+                            </ul>
+                        </div>
+                        <div className="space-y-4">
+                            <h4 className="font-bold text-zinc-900">Contact & Legal</h4>
+                            <ul className="space-y-2 text-zinc-600">
+                                <li><Link href="/contact" className="hover:text-orange-600 transition-colors">お問い合わせ</Link></li>
+                                <li><Link href="/privacy" className="hover:text-orange-600 transition-colors">プライバシーポリシー</Link></li>
+                            </ul>
+                        </div>
                     </nav>
                 </div>
 
