@@ -47,7 +47,7 @@ export default function CharacterAnimation({
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.2, margin: "-50px" }}
             className={`inline-block ${className}`}
         >
             {text.split("").map((char, index) => (

@@ -10,6 +10,7 @@ interface FadeInProps {
     direction?: "up" | "down" | "left" | "right" | "none";
     className?: string;
     viewportMargin?: string;
+    viewportAmount?: number;
     once?: boolean;
 }
 
@@ -19,7 +20,8 @@ export default function FadeIn({
     duration = 0.6,
     direction = "up",
     className = "",
-    viewportMargin = "-50px",
+    viewportMargin = "-100px",
+    viewportAmount = 0.3,
     once = true
 }: FadeInProps) {
 
@@ -45,7 +47,7 @@ export default function FadeIn({
         <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once, margin: viewportMargin as any }}
+            viewport={{ once, margin: viewportMargin as any, amount: viewportAmount }}
             variants={variants}
             className={className}
         >
