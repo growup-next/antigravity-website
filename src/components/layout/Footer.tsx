@@ -26,10 +26,11 @@ export default function Footer() {
                             デジタル人材育成研修や、助成金を活用したリスキリングのご相談はこちら
                         </p>
                         <Button
+                            asChild
                             size="lg"
                             className="bg-zinc-900 text-white hover:bg-black rounded-full px-8 shadow-lg hover:shadow-orange-500/10 transition-all font-medium"
                         >
-                            人材育成について相談する
+                            <Link href="/contact">人材育成について相談する</Link>
                         </Button>
                     </div>
                 </div>
@@ -51,10 +52,11 @@ export default function Footer() {
                             SNS運用代行やECサイト制作、ホームページ運用改善のご相談はこちら
                         </p>
                         <Button
+                            asChild
                             size="lg"
                             className="bg-transparent border-2 border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white rounded-full px-8 shadow-lg hover:shadow-lime-500/10 transition-all font-medium"
                         >
-                            Web集客について相談する
+                            <Link href="/contact">Web集客について相談する</Link>
                         </Button>
                     </div>
                 </div>

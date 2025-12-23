@@ -7,7 +7,8 @@ import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { AnimatePresence } from "framer-motion";
 
 const navItems = [
     { name: "私たちの想い", href: "/mission" },
@@ -32,6 +33,7 @@ const navItems = [
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -100,18 +102,67 @@ export default function Header() {
 
                 <div className="hidden md:block">
                     <Button
+                        asChild
                         className="rounded-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-medium px-6 shadow-lg hover:shadow-orange-500/25 transition-all"
                     >
-                        お問い合わせ
+                        <Link href="/contact">お問い合わせ</Link>
                     </Button>
                 </div>
 
-                {/* Mobile Menu Icon (Placeholder) */}
-                <button className="md:hidden text-zinc-900">
-                    <span className="block w-6 h-0.5 bg-current mb-1.5" />
-                    <span className="block w-6 h-0.5 bg-current mb-1.5" />
-                    <span className="block w-6 h-0.5 bg-current" />
+                {/* Mobile Menu Icon */}
+                <button
+                    className="md:hidden text-zinc-900 z-50 p-2"
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                >
+                    {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
+
+                {/* Mobile Menu Overlay */}
+                <AnimatePresence>
+                    {mobileMenuOpen && (
+                        <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            className="absolute top-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-black/10 shadow-2xl pt-24 pb-12 px-6 md:hidden z-40"
+                        >
+                            <nav className="flex flex-col gap-6">
+                                {navItems.map((item) => (
+                                    <div key={item.name} className="flex flex-col gap-3">
+                                        <Link
+                                            href={item.href}
+                                            onClick={() => setMobileMenuOpen(false)}
+                                            className="text-lg font-bold text-zinc-900 text-left"
+                                        >
+                                            {item.name}
+                                        </Link>
+                                        {item.subItems && (
+                                            <div className="flex flex-col gap-3 pl-4 border-l-2 border-orange-500/20">
+                                                {item.subItems.map((sub) => (
+                                                    <Link
+                                                        key={sub.name}
+                                                        href={sub.href}
+                                                        onClick={() => setMobileMenuOpen(false)}
+                                                        className="text-sm font-medium text-zinc-600 text-left hover:text-orange-600 transition-colors"
+                                                    >
+                                                        {sub.name}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
+                                <Button
+                                    asChild
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="mt-4 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold py-6 shadow-xl"
+                                >
+                                    <Link href="/contact">お問い合わせ</Link>
+                                </Button>
+                            </nav>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </header>
     );

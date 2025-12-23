@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import FadeIn from "@/components/ui/FadeIn";
 import CharacterAnimation from "@/components/ui/CharacterAnimation";
 
@@ -32,12 +31,12 @@ export default function Advantage() {
                 <FadeIn className="text-center mb-20">
                     <CharacterAnimation
                         text="Advantage"
-                        className="text-orange-500 font-medium tracking-widest uppercase mb-2 block"
+                        className="text-orange-500 font-medium tracking-widest uppercase mb-2 w-full block"
                         delay={0.1}
                     />
                     <CharacterAnimation
                         text="選ばれる理由"
-                        className="text-3xl font-bold text-zinc-800 block"
+                        className="text-3xl font-bold text-zinc-800 w-full block"
                         delay={0.3}
                     />
                 </FadeIn>

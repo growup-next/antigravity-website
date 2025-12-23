@@ -11,7 +11,7 @@ interface CharacterAnimationProps {
 
 export default function CharacterAnimation({
     text,
-    className = "",
+    className = "inline-block",
     delay = 0,
     stagger = 0.05
 }: CharacterAnimationProps) {
@@ -47,16 +47,17 @@ export default function CharacterAnimation({
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2, margin: "-50px" }}
-            className={`inline-block ${className}`}
+            viewport={{ once: true, amount: 0.1, margin: "-100px" }}
+            className={className}
         >
             {text.split("").map((char, index) => (
                 <motion.span
                     key={`${char}-${index}`}
                     variants={childVariants}
                     className="inline-block"
+                    style={{ whiteSpace: char === " " ? "pre" : "normal" }}
                 >
-                    {char === " " ? "\u00A0" : char}
+                    {char}
                 </motion.span>
             ))}
         </motion.span>
