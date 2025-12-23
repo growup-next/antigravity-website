@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import FadeIn from "@/components/ui/FadeIn";
+import CharacterAnimation from "@/components/ui/CharacterAnimation";
 import Image from "next/image";
 
 export default function Hero() {
@@ -20,20 +21,42 @@ export default function Hero() {
                         </div>
                     </FadeIn>
 
-                    <FadeIn delay={0.2}>
-                        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-800 mb-6 leading-tight">
-                            Grow Together <br />
-                            with <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-lime-500">Digital Intelligence.</span>
-                        </h1>
-                    </FadeIn>
+                    <div className="z-10">
+                        <CharacterAnimation
+                            text="Grow Together"
+                            className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-800 leading-tight block"
+                            delay={0.2}
+                        />
+                        <div className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-800 mb-6 leading-tight flex flex-wrap">
+                            <CharacterAnimation text="with" className="mr-4" delay={0.6} />
+                            <CharacterAnimation
+                                text="Digital Intelligence."
+                                className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-lime-500"
+                                delay={0.8}
+                            />
+                        </div>
+                    </div>
 
-                    <FadeIn delay={0.3}>
-                        <p className="text-lg md:text-xl text-zinc-600 mb-10 max-w-lg leading-relaxed">
-                            その課題を、自走できる力へ。<br />
-                            「デジタル人材」の育成とマーケティング支援で、<br />
-                            御社の変革を支え続けます。
-                        </p>
-                    </FadeIn>
+                    <div>
+                        <CharacterAnimation
+                            text="その課題を、自走できる力へ。"
+                            className="text-lg md:text-xl text-zinc-600 max-w-lg leading-relaxed block"
+                            delay={1.2}
+                            stagger={0.03}
+                        />
+                        <CharacterAnimation
+                            text="「デジタル人材」の育成とマーケティング支援で、"
+                            className="text-lg md:text-xl text-zinc-600 max-w-lg leading-relaxed block"
+                            delay={1.8}
+                            stagger={0.03}
+                        />
+                        <CharacterAnimation
+                            text="御社の変革を支え続けます。"
+                            className="text-lg md:text-xl text-zinc-600 mb-10 max-w-lg leading-relaxed block"
+                            delay={2.6}
+                            stagger={0.03}
+                        />
+                    </div>
 
                     <FadeIn delay={0.4}>
                         <div className="flex flex-col sm:flex-row gap-4">
