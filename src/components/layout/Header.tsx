@@ -31,7 +31,7 @@ export default function Header() {
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
                 scrolled
-                    ? "bg-white/10 backdrop-blur-md shadow-sm border-b border-white/20 py-4"
+                    ? "bg-white/20 backdrop-blur-md shadow-sm border-b border-black/10 py-4"
                     : "bg-transparent py-6"
             )}
         >
@@ -54,10 +54,10 @@ export default function Header() {
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="text-sm font-medium text-white/90 hover:text-white transition-colors relative group"
+                            className="text-sm font-medium text-zinc-800 hover:text-black transition-colors relative group"
                         >
                             {item.name}
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-lime-400 transition-all group-hover:w-full" />
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-lime-500 transition-all group-hover:w-full" />
                         </Link>
                     ))}
                 </nav>
@@ -71,7 +71,7 @@ export default function Header() {
                 </div>
 
                 {/* Mobile Menu Icon (Placeholder) */}
-                <button className="md:hidden text-white">
+                <button className="md:hidden text-zinc-900">
                     <span className="block w-6 h-0.5 bg-current mb-1.5" />
                     <span className="block w-6 h-0.5 bg-current mb-1.5" />
                     <span className="block w-6 h-0.5 bg-current" />
