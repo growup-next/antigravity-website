@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import FadeIn from "@/components/ui/FadeIn";
 import CharacterAnimation from "@/components/ui/CharacterAnimation";
@@ -101,7 +102,9 @@ export default function Contact() {
                                 </Button>
 
                                 <p className="text-[10px] text-zinc-400 text-center px-4">
-                                    送信することで、当社のプライバシーポリシーに同意したものとみなされます。
+                                    送信することで、当社の
+                                    <Link href="/privacy" className="text-orange-500 hover:underline">プライバシーポリシー</Link>
+                                    に同意したものとみなされます。
                                 </p>
                             </form>
                         </div>
