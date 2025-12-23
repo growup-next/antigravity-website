@@ -6,11 +6,11 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer className="bg-zinc-900 border-t border-zinc-800 text-white">
+        <footer className="bg-zinc-900/60 backdrop-blur-xl border-t border-white/10 text-white relative z-10">
             {/* CTA Section (Dual Gate) */}
-            <div className="grid md:grid-cols-2 border-b border-zinc-800">
+            <div className="grid md:grid-cols-2 border-b border-white/5">
                 {/* Organization / Training CTA */}
-                <div className="relative group overflow-hidden border-b md:border-b-0 md:border-r border-zinc-800">
+                <div className="relative group overflow-hidden border-b md:border-b-0 md:border-r border-white/5">
                     <Image
                         src="/footer_training.png"
                         alt="Corporate Training"
@@ -100,7 +100,7 @@ export default function Footer() {
                     </nav>
                 </div>
 
-                <div className="mt-12 pt-8 border-t border-zinc-800 text-center md:text-left text-xs text-zinc-600">
+                <div className="mt-12 pt-8 border-t border-white/5 text-center md:text-left text-xs text-zinc-600">
                     &copy; {new Date().getFullYear()} Media Creates Inc. All Rights Reserved.
                 </div>
             </div>
