@@ -15,9 +15,9 @@ export default function Footer() {
                         src="/footer_training.png"
                         alt="Corporate Training"
                         fill
-                        className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+                        className="object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/90 via-zinc-900/80 to-orange-900/40 opacity-100 group-hover:opacity-90 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/70 via-zinc-900/60 to-orange-900/30 opacity-100 group-hover:opacity-90 transition-opacity duration-500" />
                     <div className="p-12 md:p-20 flex flex-col items-center text-center relative z-10">
                         <h3 className="text-2xl md:text-3xl font-bold mb-4 relative">
                             組織を強くしたい企業様
@@ -40,9 +40,9 @@ export default function Footer() {
                         src="/footer_marketing.jpg"
                         alt="Web Marketing"
                         fill
-                        className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+                        className="object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/90 via-zinc-900/80 to-lime-900/40 opacity-100 group-hover:opacity-90 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/70 via-zinc-900/60 to-lime-900/30 opacity-100 group-hover:opacity-90 transition-opacity duration-500" />
                     <div className="p-12 md:p-20 flex flex-col items-center text-center relative z-10">
                         <h3 className="text-2xl md:text-3xl font-bold mb-4 relative">
                             Web集客を強化したい企業様
