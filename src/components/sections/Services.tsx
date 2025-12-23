@@ -3,14 +3,23 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import FadeIn from "@/components/ui/FadeIn";
+import CharacterAnimation from "@/components/ui/CharacterAnimation";
 
 export default function Services() {
     return (
         <section id="service" className="py-24 px-6 relative">
             <div className="container mx-auto">
                 <FadeIn className="text-center mb-16">
-                    <h2 className="text-orange-500 font-medium tracking-widest uppercase mb-2">Our Service</h2>
-                    <h3 className="text-3xl font-bold text-zinc-800">事業案内</h3>
+                    <CharacterAnimation
+                        text="Our Service"
+                        className="text-orange-500 font-medium tracking-widest uppercase mb-2 block"
+                        delay={0.1}
+                    />
+                    <CharacterAnimation
+                        text="事業案内"
+                        className="text-3xl font-bold text-zinc-800 block"
+                        delay={0.3}
+                    />
                 </FadeIn>
 
                 <div className="grid md:grid-cols-2 gap-8 lg:gap-12">

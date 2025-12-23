@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import FadeIn from "@/components/ui/FadeIn";
+import CharacterAnimation from "@/components/ui/CharacterAnimation";
 
 export default function CaseStudy() {
     const cases = [
@@ -30,8 +31,16 @@ export default function CaseStudy() {
             <div className="container mx-auto">
                 <FadeIn className="text-center flex flex-col items-center mb-16 gap-6">
                     <div>
-                        <h2 className="text-orange-500 font-medium tracking-widest uppercase mb-2">Case Study</h2>
-                        <h3 className="text-3xl font-bold text-zinc-800">導入事例</h3>
+                        <CharacterAnimation
+                            text="Case Study"
+                            className="text-orange-500 font-medium tracking-widest uppercase mb-2 block"
+                            delay={0.1}
+                        />
+                        <CharacterAnimation
+                            text="導入事例"
+                            className="text-3xl font-bold text-zinc-800 block"
+                            delay={0.3}
+                        />
                     </div>
                     <a href="#" className="text-sm font-medium text-orange-600 hover:text-orange-700 flex items-center gap-2 group">
                         すべての実績を見る

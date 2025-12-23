@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import FadeIn from "@/components/ui/FadeIn";
+import CharacterAnimation from "@/components/ui/CharacterAnimation";
 
 export default function Advantage() {
     const advantages = [
@@ -29,8 +30,16 @@ export default function Advantage() {
 
             <div className="container mx-auto">
                 <FadeIn className="text-center mb-20">
-                    <h2 className="text-orange-500 font-medium tracking-widest uppercase mb-2">Advantage</h2>
-                    <h3 className="text-3xl font-bold text-zinc-800">選ばれる理由</h3>
+                    <CharacterAnimation
+                        text="Advantage"
+                        className="text-orange-500 font-medium tracking-widest uppercase mb-2 block"
+                        delay={0.1}
+                    />
+                    <CharacterAnimation
+                        text="選ばれる理由"
+                        className="text-3xl font-bold text-zinc-800 block"
+                        delay={0.3}
+                    />
                 </FadeIn>
 
                 <div className="grid md:grid-cols-3 gap-8">
