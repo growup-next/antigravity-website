@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer className="bg-zinc-900/60 backdrop-blur-xl border-t border-white/10 text-white relative z-10">
+        <footer className="bg-white/5 backdrop-blur-xl border-t border-white/10 text-white relative z-10">
             {/* CTA Section (Dual Gate) */}
             <div className="grid md:grid-cols-2 border-b border-white/5">
                 {/* Organization / Training CTA */}
@@ -64,7 +64,7 @@ export default function Footer() {
             <div className="container mx-auto px-6 py-12">
                 <div className="flex flex-col md:flex-row justify-between items-start gap-8">
                     <div>
-                        <div className="mb-6 p-2 bg-white rounded-md inline-block">
+                        <div className="mb-6 inline-block">
                             <div className="relative h-10 w-40">
                                 <Image
                                     src="/logo.png"
@@ -100,7 +100,7 @@ export default function Footer() {
                     </nav>
                 </div>
 
-                <div className="mt-12 pt-8 border-t border-white/5 text-center md:text-left text-xs text-zinc-600">
+                <div className="mt-12 pt-8 border-t border-white/5 text-center md:text-left text-xs text-zinc-400">
                     &copy; {new Date().getFullYear()} Media Creates Inc. All Rights Reserved.
                 </div>
             </div>
