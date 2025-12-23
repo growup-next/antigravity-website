@@ -6,11 +6,11 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer className="bg-white/5 backdrop-blur-xl border-t border-white/10 text-white relative z-10">
+        <footer className="bg-white/10 backdrop-blur-xl border-t border-white/20 text-white relative z-10">
             {/* CTA Section (Dual Gate) */}
-            <div className="grid md:grid-cols-2 border-b border-white/5">
+            <div className="grid md:grid-cols-2 border-b border-white/10">
                 {/* Organization / Training CTA */}
-                <div className="relative group overflow-hidden border-b md:border-b-0 md:border-r border-white/5">
+                <div className="relative group overflow-hidden border-b md:border-b-0 md:border-r border-white/10">
                     <Image
                         src="/footer_training.png"
                         alt="Corporate Training"
@@ -75,14 +75,14 @@ export default function Footer() {
                             </div>
                         </div>
 
-                        <address className="not-italic text-sm text-zinc-400 space-y-4">
+                        <address className="not-italic text-sm text-white/80 space-y-4">
                             <div>
-                                <p className="font-bold text-zinc-300 mb-1">【本社】</p>
+                                <p className="font-bold text-white mb-1">【本社】</p>
                                 <p>〒600-8491</p>
                                 <p>京都市下京区室町通四条下る鶏鉾町480番地 オフィスワン四条烏丸 7Ｆ</p>
                             </div>
                             <div>
-                                <p className="font-bold text-zinc-300 mb-1">【制作部・研修事業部】</p>
+                                <p className="font-bold text-white mb-1">【制作部・研修事業部】</p>
                                 <p>〒604-8847</p>
                                 <p>京都市中京区壬生西土居ノ内町20-5 ホンダビル4階</p>
                                 <p className="mt-1">TEL : 075-741-6547 / FAX : 075-741-6507</p>
@@ -90,7 +90,7 @@ export default function Footer() {
                         </address>
                     </div>
 
-                    <nav className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-zinc-400">
+                    <nav className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-white/70">
                         <Link href="#" className="hover:text-white transition-colors">私たちの想い</Link>
                         <Link href="#" className="hover:text-white transition-colors">事業案内</Link>
                         <Link href="#" className="hover:text-white transition-colors">選ばれる理由</Link>
@@ -100,7 +100,7 @@ export default function Footer() {
                     </nav>
                 </div>
 
-                <div className="mt-12 pt-8 border-t border-white/5 text-center md:text-left text-xs text-zinc-400">
+                <div className="mt-12 pt-8 border-t border-white/10 text-center md:text-left text-xs text-white/90">
                     &copy; {new Date().getFullYear()} Media Creates Inc. All Rights Reserved.
                 </div>
             </div>
