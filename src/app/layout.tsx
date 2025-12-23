@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import Scene from "@/components/three/Scene";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,9 @@ export default function RootLayout({
         <SmoothScroll>
           {/* 3D背景シーン - 固定背景 */}
           <Scene />
+
+          {/* ページトップへ戻るボタン */}
+          <ScrollToTop />
 
           {/* コンテンツ層 */}
           <main className="relative z-10">
