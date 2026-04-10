@@ -70,7 +70,7 @@ export default function InfraSection() {
           {/* Antigravity */}
           <div className="glass-card p-8 border-blue-500/30">
             <p className="text-xs font-semibold tracking-wide text-blue-400 uppercase mb-4">
-              Antigravity Web
+              ZeroG Web
             </p>
             <div className="space-y-4">
               {[

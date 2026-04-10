@@ -20,7 +20,7 @@ export default function Navigation() {
           href="#"
           className="text-sm font-semibold tracking-tight text-white"
         >
-          Antigravity Web
+          ZeroG Web
         </a>
 
         {/* Desktop Nav */}

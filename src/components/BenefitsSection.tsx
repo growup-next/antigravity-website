@@ -35,7 +35,7 @@ export default function BenefitsSection() {
                 せっかく集客した見込み客を半分捨てているのと同じです。
               </p>
               <p className="text-sm text-neutral-400 leading-relaxed">
-                Antigravity Webが制作するサイトは、
+                ZeroG Webが制作するサイトは、
                 Googleの評価指標（PageSpeed Insights）で90点以上の満点レベルを標準としています。
                 この「爆速」の表示スピードこそが、顧客の離脱を防ぎ、
                 信頼性を高める最高のおもてなしとなります。

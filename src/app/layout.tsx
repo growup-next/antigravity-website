@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Antigravity Web — AIがあなたの専属Web担当者に",
+  title: "ZeroG Web — AIエージェントが、あなたの専属Webチームに",
   description:
-    "5万円から、月額0円。AIを活用したホームページ制作サービス。短納期・低価格で高品質なWebサイトを実現します。",
+    "5万円から、月額0円。AIエージェントが制作から日々の更新までをシームレスにアシスト。圧倒的な低価格とスピードで、高品質なWebサイトを実現します。",
 };
 
 export default function RootLayout({

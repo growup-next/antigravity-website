@@ -18,9 +18,9 @@ export default function AiAssistantSection() {
             操作マニュアルは不要です。
           </h2>
           <p className="text-lg text-neutral-400 leading-relaxed max-w-xl mx-auto">
-            Antigravity Webの真の価値は、納品後にあります。
+            ZeroG Webの真の価値は、納品後にあります。
             サイトは「作ってから」が本番。
-            制作を担当したAI（Antigravity）が、あなたの専属デジタル秘書になります。
+            制作を担当したAIエージェントが、あなたの専属デジタル秘書になります。
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export default function AiAssistantSection() {
                   キャンペーン情報を追加しました。ご確認ください。
                 </p>
                 <p className="text-xs mt-2 text-green-400">
-                  — Antigravity AI
+                  — ZeroG AI
                 </p>
               </div>
             </div>
@@ -60,7 +60,7 @@ export default function AiAssistantSection() {
               AIが「設計図」を熟知
             </h3>
             <p className="text-sm text-neutral-400 leading-relaxed">
-              Antigravityは単なるツールではありません。
+              ZeroG Webは単なるツールではありません。
               あなたのサイトのコードを直接理解した上で変更を実行する、
               専属のデジタル秘書です。
             </p>

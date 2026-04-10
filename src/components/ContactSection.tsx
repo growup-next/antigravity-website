@@ -17,7 +17,7 @@ export default function ContactSection() {
         </h2>
 
         <p className="text-lg text-neutral-300 leading-relaxed max-w-2xl mx-auto mb-6">
-          Antigravity Webは、単なる制作代行サービスではありません。
+          ZeroG Webは、単なる制作代行サービスではありません。
           最先端のAI技術をすべてのビジネスオーナーの「味方」へと翻訳し、
           デジタルシフト（DX）を支えるパートナーシップです。
         </p>

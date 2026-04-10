@@ -22,16 +22,16 @@ export default function HeroSection() {
         <h1 className="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto">
           5万円から。月額0円。
           <br />
-          <span className="text-blue-400">AI</span>があなたの
+          <span className="text-blue-400">AIエージェント</span>が、
           <br className="md:hidden" />
-          専属Web担当者に。
+          あなたの専属Webチームに。
         </h1>
 
         {/* Sub Headline */}
         <p className="text-lg md:text-xl text-neutral-400 leading-relaxed max-w-2xl mx-auto mb-10">
-          低価格・短納期・高品質を同時に達成。
+          自律的に動くAIエージェントが、制作から日々の更新までをシームレスにアシスト。
           <br className="hidden md:block" />
-          ビジネスのアイデアを、熱いうちに形にします。
+          圧倒的な低価格とスピードで、ビジネスのアイデアを熱いうちに形にします。
         </p>
 
         {/* CTA Buttons */}
