@@ -133,13 +133,17 @@ export default function ChatWidget() {
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
                 onKeyDown={(event) => {
-                  if (event.key === "Enter" && !event.shiftKey) {
+                  if (
+                    event.key === "Enter" &&
+                    event.shiftKey &&
+                    !event.nativeEvent.isComposing
+                  ) {
                     event.preventDefault();
                     handleSubmit(event as unknown as React.FormEvent<HTMLFormElement>);
                   }
                 }}
-                rows={1}
-                placeholder="質問を入力（Enterで送信）"
+                rows={2}
+                placeholder="質問を入力（Shift+Enterで送信）"
                 className="max-h-32 min-h-[40px] flex-1 resize-none rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white placeholder:text-neutral-500 focus:border-blue-400 focus:outline-none"
               />
               {isBusy ? (

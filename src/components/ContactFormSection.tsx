@@ -215,6 +215,13 @@ export default function ContactFormSection() {
                 <p className="text-xs text-neutral-600 text-center">
                   送信内容は<a href="https://growup-next.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="underline hover:text-neutral-400 transition-colors">プライバシーポリシー</a>に従い取り扱います。
                 </p>
+                <p className="text-[10px] text-neutral-600 text-center leading-relaxed">
+                  このサイトはreCAPTCHAによって保護されており、Googleの
+                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-neutral-400 transition-colors">プライバシーポリシー</a>
+                  と
+                  <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-neutral-400 transition-colors">利用規約</a>
+                  が適用されます。
+                </p>
               </form>
             )}
           </div>
