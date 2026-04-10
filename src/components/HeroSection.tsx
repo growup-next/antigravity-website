@@ -8,7 +8,7 @@ export default function HeroSection() {
 
       <div className="section-container relative z-10 text-center pt-40 pb-20 md:pt-48 md:pb-32">
         {/* Status Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 mb-8">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 mb-8 animate-on-scroll">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400" />
@@ -19,7 +19,7 @@ export default function HeroSection() {
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto">
+        <h1 className="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto animate-on-scroll animate-delay-100">
           5万円から。月額0円。
           <br />
           <span className="text-blue-400">AIエージェント</span>が、
@@ -28,12 +28,12 @@ export default function HeroSection() {
         </h1>
 
         {/* Sub Headline */}
-        <p className="text-lg md:text-xl text-neutral-400 leading-relaxed max-w-2xl mx-auto mb-10">
+        <p className="text-lg md:text-xl text-neutral-400 leading-relaxed max-w-2xl mx-auto mb-10 animate-on-scroll animate-delay-200">
           自律的に動くAIエージェントが、制作から日々の更新までをシームレスにアシスト。圧倒的な低価格とスピードで、ビジネスのアイデアを熱いうちに形にします。
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-on-scroll animate-delay-300">
           <a href="#simulator" className="shiny-cta">
             <span>無料で見積もりする</span>
           </a>
@@ -43,7 +43,7 @@ export default function HeroSection() {
         </div>
 
         {/* Credibility Metrics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-10 border-t border-white/5 max-w-3xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-10 border-t border-white/5 max-w-3xl mx-auto animate-on-scroll animate-delay-400">
           {[
             { value: "¥50,000〜", label: "初期費用" },
             { value: "¥0", label: "月額費用" },

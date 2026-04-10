@@ -172,3 +172,30 @@ h1, h2, h3, h4, h5, h6 {
   width: 18px;
   height: 18px;
 }
+
+/* ===== Scroll Animations ===== */
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-delay-100 { transition-delay: 100ms; }
+.animate-delay-200 { transition-delay: 200ms; }
+.animate-delay-300 { transition-delay: 300ms; }
+.animate-delay-400 { transition-delay: 400ms; }
+.animate-delay-500 { transition-delay: 500ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

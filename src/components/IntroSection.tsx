@@ -27,7 +27,7 @@ export default function IntroSection() {
     <section id="intro" className="border-t border-white/5">
       <div className="section-container py-24">
         {/* Section Header */}
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-center mb-16 md:mb-20 animate-on-scroll">
           <p className="text-xs font-medium tracking-wide text-neutral-500 uppercase mb-3">
             なぜ今、AIなのか
           </p>
@@ -45,12 +45,13 @@ export default function IntroSection() {
 
         {/* 3つの壁 → 解決 */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 md:mb-20">
-          {painPoints.map((item) => {
+          {painPoints.map((item, i) => {
             const c = colorMap[item.color];
+            const delay = i === 1 ? "animate-delay-100" : i === 2 ? "animate-delay-200" : "";
             return (
               <div
                 key={item.label}
-                className={`glass-card p-8 text-center group transition-colors ${c.border}`}
+                className={`glass-card p-8 text-center group transition-colors ${c.border} animate-on-scroll ${delay}`}
               >
                 <div className={`w-12 h-12 rounded-lg ${c.icon} flex items-center justify-center mx-auto mb-4 transition-transform group-hover:scale-110`}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className={c.text}>
@@ -70,7 +71,7 @@ export default function IntroSection() {
         </div>
 
         {/* 本文 */}
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto animate-on-scroll">
           <p className="text-lg text-neutral-300 leading-relaxed mb-6">
             従来は「人の手」が数週間かけて行っていた設計やプログラミングを、
             AIが自律的に、かつ瞬時に処理する仕組みを構築しました。

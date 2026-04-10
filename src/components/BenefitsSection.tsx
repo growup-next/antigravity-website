@@ -3,7 +3,7 @@ export default function BenefitsSection() {
     <section id="benefits" className="border-t border-white/5">
       <div className="section-container py-24">
         {/* Section Header */}
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-center mb-16 md:mb-20 animate-on-scroll">
           <p className="text-xs font-medium tracking-wide text-neutral-500 uppercase mb-3">
             プロ品質の証明
           </p>
@@ -19,7 +19,7 @@ export default function BenefitsSection() {
         </div>
 
         {/* PageSpeed */}
-        <div className="glass-card p-8 md:p-12 mb-6">
+        <div className="glass-card p-8 md:p-12 mb-6 animate-on-scroll animate-delay-100">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <p className="text-xs font-semibold tracking-wide text-blue-400 uppercase mb-3">
@@ -55,7 +55,7 @@ export default function BenefitsSection() {
         </div>
 
         {/* SEO */}
-        <div className="glass-card p-8 md:p-12 mb-6">
+        <div className="glass-card p-8 md:p-12 mb-6 animate-on-scroll animate-delay-200">
           <p className="text-xs font-semibold tracking-wide text-blue-400 uppercase mb-3">
             検索エンジンに愛される「電子の名札」
           </p>
@@ -88,7 +88,7 @@ export default function BenefitsSection() {
         </div>
 
         {/* Bottom Quote */}
-        <p className="text-lg text-neutral-400 leading-relaxed text-center mt-8 max-w-2xl mx-auto">
+        <p className="text-lg text-neutral-400 leading-relaxed text-center mt-8 max-w-2xl mx-auto animate-on-scroll">
           「速くて、検索に見つかりやすい」。
           この基本性能が最初から備わっているため、
           公開直後からプロ水準のスタートが切れます。

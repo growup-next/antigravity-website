@@ -30,7 +30,7 @@ export default function InfraSection() {
     <section id="infra" className="border-t border-white/5">
       <div className="section-container py-24">
         {/* Section Header */}
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-center mb-16 md:mb-20 animate-on-scroll">
           <p className="text-xs font-medium tracking-wide text-neutral-500 uppercase mb-3">
             月額0円の仕組み
           </p>
@@ -48,7 +48,7 @@ export default function InfraSection() {
         {/* 比較: 従来 vs Antigravity */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 max-w-4xl mx-auto">
           {/* 従来 */}
-          <div className="glass-card p-8">
+          <div className="glass-card p-8 animate-on-scroll animate-delay-100">
             <p className="text-xs font-semibold tracking-wide text-neutral-500 uppercase mb-4">
               従来のWeb制作
             </p>
@@ -68,7 +68,7 @@ export default function InfraSection() {
           </div>
 
           {/* Antigravity */}
-          <div className="glass-card p-8 border-blue-500/30">
+          <div className="glass-card p-8 border-blue-500/30 animate-on-scroll animate-delay-200">
             <p className="text-xs font-semibold tracking-wide text-blue-400 uppercase mb-4">
               ZeroG Web
             </p>
@@ -90,10 +90,12 @@ export default function InfraSection() {
 
         {/* ROIポイント */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {points.map((point) => (
+          {points.map((point, i) => {
+            const delays = ["animate-delay-100", "animate-delay-200", "animate-delay-300"];
+            return (
             <div
               key={point.title}
-              className={`glass-card p-8 group transition-colors ${colorMap[point.color]}`}
+              className={`glass-card p-8 group transition-colors ${colorMap[point.color]} animate-on-scroll ${delays[i]}`}
             >
               <h3 className="text-xl font-medium text-white mb-3 leading-[1.3]">
                 {point.title}
@@ -102,11 +104,12 @@ export default function InfraSection() {
                 {point.description}
               </p>
             </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Bottom message */}
-        <p className="text-lg text-neutral-400 leading-relaxed text-center mt-12 max-w-2xl mx-auto">
+        <p className="text-lg text-neutral-400 leading-relaxed text-center mt-12 max-w-2xl mx-auto animate-on-scroll">
           ランニングコストを排除することは、小規模ビジネスにおいて最強の継続戦略。
           浮いた予算を広告費や新商品の開発に回すことで、
           Webサイトは真の意味で「利益を生む資産」へと変わります。

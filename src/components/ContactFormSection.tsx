@@ -76,7 +76,7 @@ export default function ContactFormSection() {
       />
       <section id="contact-form" className="border-t border-white/5">
         <div className="section-container py-24">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 animate-on-scroll">
             <p className="text-xs font-medium tracking-wide text-neutral-500 uppercase mb-3">
               お問い合わせ
             </p>

@@ -7,33 +7,33 @@ export default function ContactSection() {
       </div>
 
       <div className="section-container py-32 text-center relative z-10">
-        <p className="text-xs font-medium tracking-wide text-neutral-500 uppercase mb-3">
+        <p className="text-xs font-medium tracking-wide text-neutral-500 uppercase mb-3 animate-on-scroll">
           AIと共に歩む、持続可能なWeb戦略
         </p>
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 animate-on-scroll animate-delay-100">
           成長の追い風に、
           <br />
           しましょう。
         </h2>
 
-        <p className="text-lg text-neutral-300 leading-relaxed max-w-2xl mx-auto mb-6">
+        <p className="text-lg text-neutral-300 leading-relaxed max-w-2xl mx-auto mb-6 animate-on-scroll animate-delay-200">
           ZeroG Webは、単なる制作代行サービスではありません。
           最先端のAI技術をすべてのビジネスオーナーの「味方」へと翻訳し、
           デジタルシフト（DX）を支えるパートナーシップです。
         </p>
-        <p className="text-lg text-neutral-400 leading-relaxed max-w-2xl mx-auto mb-10">
+        <p className="text-lg text-neutral-400 leading-relaxed max-w-2xl mx-auto mb-10 animate-on-scroll animate-delay-300">
           技術の進歩を、我慢やコストの理由にするのではなく、成長の追い風にしましょう。
           まずは見積もりシミュレーターで、
           あなたの理想がどれほどの驚きを持って実現できるか確かめてみてください。
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-on-scroll animate-delay-400">
           <a href="#simulator" className="shiny-cta">
             <span>見積もりシミュレーターへ</span>
           </a>
         </div>
 
-        <p className="text-sm text-neutral-500 mt-8 leading-relaxed">
+        <p className="text-sm text-neutral-500 mt-8 leading-relaxed animate-on-scroll animate-delay-500">
           AIと共に、新しいビジネスのステージでお会いできるのを楽しみにしています。
         </p>
       </div>

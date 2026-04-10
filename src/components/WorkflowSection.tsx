@@ -30,7 +30,7 @@ export default function WorkflowSection() {
     <section id="workflow" className="bg-black/20 border-t border-white/5">
       <div className="section-container py-24">
         {/* Section Header */}
-        <div className="text-center mb-6">
+        <div className="text-center mb-6 animate-on-scroll">
           <p className="text-xs font-medium tracking-wide text-neutral-500 uppercase mb-3">
             制作ワークフロー
           </p>
@@ -49,7 +49,7 @@ export default function WorkflowSection() {
         {/* Steps - Timeline */}
         <div className="flex flex-col md:flex-row gap-16 mt-16">
           {/* Sticky sidebar (desktop) */}
-          <div className="hidden md:block md:w-1/3">
+          <div className="hidden md:block md:w-1/3 animate-on-scroll animate-delay-100">
             <div className="sticky top-32">
               <p className="text-xs font-medium tracking-wide text-blue-400 uppercase mb-4">
                 Process
@@ -67,8 +67,10 @@ export default function WorkflowSection() {
 
           {/* Timeline Steps */}
           <div className="md:w-2/3 space-y-0">
-            {steps.map((step, i) => (
-              <div key={step.number} className="flex gap-6 group">
+            {steps.map((step, i) => {
+              const delays = ["", "animate-delay-100", "animate-delay-200", "animate-delay-300"];
+              return (
+              <div key={step.number} className={`flex gap-6 group animate-on-scroll ${delays[i]}`}>
                 {/* Step number + connector */}
                 <div className="flex flex-col items-center">
                   <div
@@ -98,12 +100,13 @@ export default function WorkflowSection() {
                   </p>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
         {/* Highlight: クリーン・スレート */}
-        <div className="glass-card p-8 md:p-12 text-center mt-12">
+        <div className="glass-card p-8 md:p-12 text-center mt-12 animate-on-scroll">
           <p className="text-xs font-semibold tracking-wide text-blue-400 uppercase mb-3">
             STEP 04 のポイント
           </p>

@@ -52,7 +52,7 @@ export default function SimulatorSection() {
     <section id="simulator" className="border-t border-white/5">
       <div className="section-container py-24">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-on-scroll">
           <p className="text-xs font-medium tracking-wide text-neutral-500 uppercase mb-3">
             料金シミュレーター
           </p>

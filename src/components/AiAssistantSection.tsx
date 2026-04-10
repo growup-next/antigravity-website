@@ -8,7 +8,7 @@ export default function AiAssistantSection() {
     <section id="ai-assistant" className="bg-black/40 border-t border-white/5">
       <div className="section-container py-24">
         {/* Section Header */}
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-center mb-16 md:mb-20 animate-on-scroll">
           <p className="text-xs font-medium tracking-wide text-neutral-500 uppercase mb-3">
             納品後の更新体験
           </p>
@@ -25,7 +25,7 @@ export default function AiAssistantSection() {
         </div>
 
         {/* Chat-like Demo */}
-        <div className="max-w-2xl mx-auto mb-16">
+        <div className="max-w-2xl mx-auto mb-16 animate-on-scroll animate-delay-100">
           <div className="space-y-4">
             {examples.map((example) => (
               <div key={example} className="flex justify-end">
@@ -49,7 +49,7 @@ export default function AiAssistantSection() {
         </div>
 
         {/* 2-column benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto animate-on-scroll animate-delay-200">
           <div className="glass-card p-8 group hover:border-blue-500/30 transition-colors">
             <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-blue-400">

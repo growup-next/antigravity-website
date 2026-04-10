@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import FluidBackground from "@/components/FluidBackground";
+import ClientInit from "@/components/ClientInit";
 import HeroSection from "@/components/HeroSection";
 import IntroSection from "@/components/IntroSection";
 import WorkflowSection from "@/components/WorkflowSection";
@@ -14,6 +15,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
+      <ClientInit />
       <FluidBackground />
       <Navigation />
       <main>
