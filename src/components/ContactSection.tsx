@@ -31,9 +31,6 @@ export default function ContactSection() {
           <a href="#simulator" className="shiny-cta">
             <span>見積もりシミュレーターへ</span>
           </a>
-          <a href="mailto:info@antigravity.co.jp" className="btn-outline">
-            メールで相談する
-          </a>
         </div>
 
         <p className="text-sm text-neutral-500 mt-8 leading-relaxed">
