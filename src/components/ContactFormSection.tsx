@@ -14,7 +14,7 @@ declare global {
   }
 }
 
-type FormState = "idle" | "submitting" | "success" | "error";
+type FormState = "idle" | "submitting" | "success" | "error" | "error-recaptcha";
 
 export default function ContactFormSection() {
   const [formState, setFormState] = useState<FormState>("idle");
@@ -24,8 +24,13 @@ export default function ContactFormSection() {
     e.preventDefault();
     setFormState("submitting");
 
+    let token: string;
     try {
-      const token = await new Promise<string>((resolve, reject) => {
+      token = await new Promise<string>((resolve, reject) => {
+        if (!window.grecaptcha) {
+          reject(new Error("reCAPTCHA not loaded"));
+          return;
+        }
         window.grecaptcha.ready(() => {
           window.grecaptcha
             .execute(RECAPTCHA_SITE_KEY, { action: "submit" })
@@ -33,7 +38,12 @@ export default function ContactFormSection() {
             .catch(reject);
         });
       });
+    } catch {
+      setFormState("error-recaptcha");
+      return;
+    }
 
+    try {
       const formData = new FormData(e.currentTarget);
       formData.append("g-recaptcha-response", token);
 
@@ -62,7 +72,7 @@ export default function ContactFormSection() {
     <>
       <Script
         src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}
-        strategy="lazyOnload"
+        strategy="afterInteractive"
       />
       <section id="contact-form" className="border-t border-white/5">
         <div className="section-container py-24">
@@ -184,6 +194,11 @@ export default function ContactFormSection() {
                 {formState === "error" && (
                   <p className="text-sm text-red-400 bg-red-500/10 border border-red-500/20 rounded-lg px-4 py-3">
                     送信に失敗しました。時間をおいて再度お試しいただくか、メールにてご連絡ください。
+                  </p>
+                )}
+                {formState === "error-recaptcha" && (
+                  <p className="text-sm text-red-400 bg-red-500/10 border border-red-500/20 rounded-lg px-4 py-3">
+                    reCAPTCHAの読み込みに失敗しました。ページを再読み込みしてお試しください。
                   </p>
                 )}
 
