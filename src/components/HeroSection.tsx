@@ -29,9 +29,7 @@ export default function HeroSection() {
 
         {/* Sub Headline */}
         <p className="text-lg md:text-xl text-neutral-400 leading-relaxed max-w-2xl mx-auto mb-10">
-          自律的に動くAIエージェントが、制作から日々の更新までをシームレスにアシスト。
-          <br className="hidden md:block" />
-          圧倒的な低価格とスピードで、ビジネスのアイデアを熱いうちに形にします。
+          自律的に動くAIエージェントが、制作から日々の更新までをシームレスにアシスト。圧倒的な低価格とスピードで、ビジネスのアイデアを熱いうちに形にします。
         </p>
 
         {/* CTA Buttons */}

@@ -7,14 +7,8 @@ export default function Footer() {
             &copy; 2026 ZeroG Web. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-neutral-400 hover:text-white transition-colors">
+            <a href="https://growup-next.com/privacy-policy/" className="text-neutral-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
               プライバシーポリシー
-            </a>
-            <a href="#" className="text-neutral-400 hover:text-white transition-colors">
-              利用規約
-            </a>
-            <a href="#" className="text-neutral-400 hover:text-white transition-colors">
-              特定商取引法に基づく表記
             </a>
           </div>
         </div>

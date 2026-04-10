@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const navLinks = [
-  { label: "AIとは", href: "#intro" },
+  { label: "ZeroG Webとは", href: "#intro" },
   { label: "ワークフロー", href: "#workflow" },
   { label: "料金", href: "#simulator" },
   { label: "品質", href: "#benefits" },
