@@ -112,20 +112,6 @@ export default function ContactFormSection() {
                 />
               </div>
 
-              {/* 役職名（必須） */}
-              <div>
-                <label className={labelClass}>
-                  役職名 <span className="text-blue-400 text-xs ml-1">必須</span>
-                </label>
-                <input
-                  type="text"
-                  name="役職名"
-                  required
-                  className={inputClass}
-                  placeholder="代表取締役"
-                />
-              </div>
-
               {/* メールアドレス（必須） */}
               <div>
                 <label className={labelClass}>
