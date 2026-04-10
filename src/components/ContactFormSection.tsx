@@ -22,6 +22,8 @@ export default function ContactFormSection() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     setFormState("submitting");
 
     let token: string;
@@ -44,7 +46,6 @@ export default function ContactFormSection() {
     }
 
     try {
-      const formData = new FormData(e.currentTarget);
       formData.append("g-recaptcha-response", token);
 
       const res = await fetch("https://ssgform.com/s/4vJp8ubyG5er", {
@@ -54,7 +55,7 @@ export default function ContactFormSection() {
 
       if (res.ok) {
         setFormState("success");
-        formRef.current?.reset();
+        form.reset();
       } else {
         setFormState("error");
       }
