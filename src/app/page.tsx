@@ -8,6 +8,7 @@ import SimulatorSection from "@/components/SimulatorSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import AiAssistantSection from "@/components/AiAssistantSection";
 import ContactSection from "@/components/ContactSection";
+import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <BenefitsSection />
         <AiAssistantSection />
         <ContactSection />
+        <ContactFormSection />
       </main>
       <Footer />
     </>
