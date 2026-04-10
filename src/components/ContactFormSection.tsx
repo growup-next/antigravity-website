@@ -17,7 +17,6 @@ export default function ContactFormSection() {
       const res = await fetch("https://ssgform.com/s/4vJp8ubyG5er", {
         method: "POST",
         body: formData,
-        headers: { "X-Requested-With": "XMLHttpRequest" },
       });
 
       if (res.ok) {
