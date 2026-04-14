@@ -17,9 +17,6 @@ const options: Option[] = [
   { id: "contact", label: "お問い合わせフォーム", price: 15000, description: "自動返信メール付きフォーム" },
   { id: "analytics", label: "GA4ダッシュボード", price: 10000, description: "Google Analytics連携と初期設定" },
   { id: "chatbot", label: "AIチャットボット", price: 50000, description: "24時間自動応答チャット" },
-  { id: "sns", label: "SNS投稿生成", price: 25000, description: "AIによるSNS投稿コンテンツ自動生成" },
-  { id: "seo", label: "SEO支援パック", price: 30000, description: "メタタグ最適化・構造化データ設定" },
-  { id: "review", label: "口コミ返信アシスト", price: 20000, description: "Googleマップ口コミへのAI返信下書き" },
   { id: "branding", label: "ロゴ・名刺制作", price: 35000, description: "AIデザインによるロゴと名刺データ" },
 ];
 
