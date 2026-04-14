@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import dynamic from "next/dynamic";
 import "./globals.css";
-import ChatWidget from "@/components/ChatWidget";
+
+const ChatWidget = dynamic(() => import("@/components/ChatWidget"));
 
 const inter = Inter({
   subsets: ["latin"],

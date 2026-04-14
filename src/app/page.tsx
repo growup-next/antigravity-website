@@ -1,16 +1,24 @@
+import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
-import FluidBackground from "@/components/FluidBackground";
 import ClientInit from "@/components/ClientInit";
 import HeroSection from "@/components/HeroSection";
 import IntroSection from "@/components/IntroSection";
 import WorkflowSection from "@/components/WorkflowSection";
 import InfraSection from "@/components/InfraSection";
-import SimulatorSection from "@/components/SimulatorSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import AiAssistantSection from "@/components/AiAssistantSection";
 import ContactSection from "@/components/ContactSection";
-import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
+
+const FluidBackground = dynamic(
+  () => import("@/components/FluidBackground")
+);
+const SimulatorSection = dynamic(
+  () => import("@/components/SimulatorSection")
+);
+const ContactFormSection = dynamic(
+  () => import("@/components/ContactFormSection")
+);
 
 export default function Home() {
   return (
