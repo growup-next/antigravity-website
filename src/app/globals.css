@@ -17,7 +17,7 @@
   --color-blue-600: #2563eb;
   --color-green-400: #4ade80;
   --color-purple-400: #c084fc;
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: var(--font-inter), 'Inter', sans-serif;
 }
 
 /* ===== Base Styles (Dark Theme) ===== */

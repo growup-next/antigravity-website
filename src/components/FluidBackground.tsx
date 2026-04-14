@@ -1,11 +1,23 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const MOBILE_BREAKPOINT = 768;
 
 export default function FluidBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -13,8 +25,8 @@ export default function FluidBackground() {
     let lastUpdateTime = Date.now();
 
     const config = {
-      SIM_RESOLUTION: 128,
-      DYE_RESOLUTION: 1024,
+      SIM_RESOLUTION: 64,
+      DYE_RESOLUTION: 512,
       DENSITY_DISSIPATION: 1,
       VELOCITY_DISSIPATION: 0.2,
       PRESSURE: 0.8,
@@ -542,7 +554,9 @@ export default function FluidBackground() {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("touchmove", handleTouchMove);
     };
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) return null;
 
   return (
     <canvas

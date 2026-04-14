@@ -72,7 +72,7 @@ export default function ContactFormSection() {
     <>
       <Script
         src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
       <section id="contact-form" className="border-t border-white/5">
         <div className="section-container py-24">
