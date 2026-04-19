@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "ZeroG Webとは", href: "#intro" },
@@ -16,11 +17,15 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-16 border-b border-white/5 bg-black/50 backdrop-blur-md">
       <div className="section-container flex items-center justify-between h-full">
-        <a
-          href="#"
-          className="text-sm font-semibold tracking-tight text-white"
-        >
-          ZeroG Web
+        <a href="#">
+          <Image
+            src="/zerog-web-logo.png"
+            alt="ZeroG Web"
+            width={120}
+            height={34}
+            className="h-8 w-auto"
+            priority
+          />
         </a>
 
         {/* Desktop Nav */}
