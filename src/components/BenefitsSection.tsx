@@ -18,38 +18,45 @@ export default function BenefitsSection() {
           </p>
         </div>
 
-        {/* PageSpeed */}
+        {/* Tech Stack */}
         <div className="glass-card p-8 md:p-12 mb-6 animate-on-scroll animate-delay-100">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <p className="text-xs font-semibold tracking-wide text-blue-400 uppercase mb-3">
-                「3秒の壁」を突破する圧倒的な速さ
+                速さには、ちゃんと理由がある
               </p>
               <h3 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 leading-[1.1]">
-                PageSpeed
+                最新技術が、
                 <br />
-                <span className="text-blue-400">90点以上</span>が標準。
+                <span className="text-blue-400">速さの正体</span>です。
               </h3>
               <p className="text-sm text-neutral-400 leading-relaxed mb-4">
-                Webサイトは、表示に3秒以上かかると訪問者の約50%が離脱すると言われています。
-                せっかく集客した見込み客を半分捨てているのと同じです。
+                GoogleがWeb品質基準として定めるCore Web Vitalsに最適化されたNext.jsフレームワークを採用。
+                Notion・Vercel・AI企業各社が使う同じインフラで配信されるため、
+                表示速度・安定性・SEOが高い水準で揃います。
               </p>
               <p className="text-sm text-neutral-400 leading-relaxed">
-                ZeroG Webが制作するサイトは、
-                Googleの評価指標（PageSpeed Insights）で90点以上の満点レベルを標準としています。
-                この「爆速」の表示スピードこそが、顧客の離脱を防ぎ、
-                信頼性を高める最高のおもてなしとなります。
+                さらにこの最新コード構造は、AIが直接読み書きできる設計になっています。
+                納品後の更新もAIへの指示ひとつで完結。
+                技術的に陳腐化しにくく、長く使い続けられるサイトです。
               </p>
             </div>
-            <div className="text-center">
-              <div className="inline-flex flex-col items-center justify-center rounded-full w-[180px] h-[180px] border-2 border-blue-500/30 bg-blue-500/10">
-                <span className="text-6xl font-bold text-white leading-none">
-                  90
-                </span>
-                <span className="text-xs text-neutral-500 mt-1 tracking-wide uppercase">
-                  PageSpeed
-                </span>
-              </div>
+            <div className="flex flex-col items-center justify-center gap-3">
+              {[
+                { name: "Next.js", desc: "Reactフレームワーク" },
+                { name: "Vercel", desc: "エッジ配信インフラ" },
+                { name: "Tailwind CSS", desc: "モダンスタイリング" },
+              ].map((tech) => (
+                <div
+                  key={tech.name}
+                  className="w-full max-w-[220px] flex items-center gap-3 px-4 py-3 rounded-lg border border-blue-500/20 bg-blue-500/5"
+                >
+                  <span className="text-sm font-semibold text-white w-24 shrink-0">
+                    {tech.name}
+                  </span>
+                  <span className="text-xs text-neutral-500">{tech.desc}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
