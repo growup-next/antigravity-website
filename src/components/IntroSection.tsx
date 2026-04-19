@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function IntroSection() {
   const painPoints = [
     {
@@ -41,6 +43,15 @@ export default function IntroSection() {
             高い壁が3つありました。
             AI技術の飛躍的な進歩が、その常識を劇的に塗り替えます。
           </p>
+          <div className="mt-10 rounded-2xl overflow-hidden max-w-2xl mx-auto">
+            <Image
+              src="/image01.webp"
+              alt="AIが脳のように進化するイメージ"
+              width={800}
+              height={450}
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </div>
 
         {/* 3つの壁 → 解決 */}
