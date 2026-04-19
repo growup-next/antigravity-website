@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
 const steps = [
   {
     number: "01",
@@ -26,6 +30,34 @@ const steps = [
 ];
 
 export default function WorkflowSection() {
+  const [activeSteps, setActiveSteps] = useState<boolean[]>([false, false, false, false]);
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observers = stepRefs.current.map((el, i) => {
+      if (!el) return null;
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveSteps((prev) => {
+              if (prev[i]) return prev;
+              const next = [...prev];
+              next[i] = true;
+              return next;
+            });
+          }
+        },
+        { threshold: 0.5 }
+      );
+      observer.observe(el);
+      return observer;
+    });
+
+    return () => {
+      observers.forEach((obs) => obs?.disconnect());
+    };
+  }, []);
+
   return (
     <section id="workflow" className="bg-black/20 border-t border-white/5">
       <div className="section-container py-24">
@@ -70,36 +102,40 @@ export default function WorkflowSection() {
             {steps.map((step, i) => {
               const delays = ["", "animate-delay-100", "animate-delay-200", "animate-delay-300"];
               return (
-              <div key={step.number} className={`flex gap-6 group animate-on-scroll ${delays[i]}`}>
-                {/* Step number + connector */}
-                <div className="flex flex-col items-center">
-                  <div
-                    className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 ${
-                      i === 0
-                        ? "bg-blue-600 text-white"
-                        : "bg-neutral-800 border border-white/10 text-neutral-400"
-                    }`}
-                  >
-                    {i + 1}
+                <div
+                  key={step.number}
+                  ref={(el) => { stepRefs.current[i] = el; }}
+                  className={`flex gap-6 group animate-on-scroll ${delays[i]}`}
+                >
+                  {/* Step number + connector */}
+                  <div className="flex flex-col items-center">
+                    <div
+                      className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 transition-colors duration-500 ${
+                        activeSteps[i]
+                          ? "bg-blue-600 text-white"
+                          : "bg-neutral-800 border border-white/10 text-neutral-400"
+                      }`}
+                    >
+                      {i + 1}
+                    </div>
+                    {i < steps.length - 1 && (
+                      <div className="w-px flex-1 bg-white/10 min-h-[60px]" />
+                    )}
                   </div>
-                  {i < steps.length - 1 && (
-                    <div className="w-px flex-1 bg-white/10 min-h-[60px]" />
-                  )}
-                </div>
 
-                {/* Content */}
-                <div className="pb-10">
-                  <p className="text-xs font-semibold tracking-wide text-blue-400 uppercase mb-1">
-                    STEP {step.number}
-                  </p>
-                  <h3 className="text-xl font-medium text-white mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-sm text-neutral-400 leading-relaxed">
-                    {step.description}
-                  </p>
+                  {/* Content */}
+                  <div className="pb-10">
+                    <p className="text-xs font-semibold tracking-wide text-blue-400 uppercase mb-1">
+                      STEP {step.number}
+                    </p>
+                    <h3 className="text-xl font-medium text-white mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-sm text-neutral-400 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
               );
             })}
           </div>
