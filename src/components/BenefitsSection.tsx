@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function BenefitsSection() {
   return (
     <section id="benefits" className="border-t border-white/5">
@@ -16,6 +18,15 @@ export default function BenefitsSection() {
             「AIが作るなら、品質はそれなりでは？」という心配は不要です。
             最新のAIは人間が手作業で行うには細かすぎる最適化を、標準仕様として完璧に実行します。
           </p>
+          <div className="mt-10 rounded-2xl overflow-hidden max-w-2xl mx-auto">
+            <Image
+              src="/image02.webp"
+              alt="AIが制作したプロ品質のWebサイトイメージ"
+              width={1270}
+              height={952}
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </div>
 
         {/* Tech Stack */}
