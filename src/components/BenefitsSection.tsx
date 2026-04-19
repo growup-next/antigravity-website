@@ -52,22 +52,14 @@ export default function BenefitsSection() {
                 技術的に陳腐化しにくく、長く使い続けられるサイトです。
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center gap-3">
-              {[
-                { name: "Next.js", desc: "Reactフレームワーク" },
-                { name: "Vercel", desc: "エッジ配信インフラ" },
-                { name: "Tailwind CSS", desc: "モダンスタイリング" },
-              ].map((tech) => (
-                <div
-                  key={tech.name}
-                  className="w-full max-w-[220px] flex items-center gap-3 px-4 py-3 rounded-lg border border-blue-500/20 bg-blue-500/5"
-                >
-                  <span className="text-sm font-semibold text-white w-24 shrink-0">
-                    {tech.name}
-                  </span>
-                  <span className="text-xs text-neutral-500">{tech.desc}</span>
-                </div>
-              ))}
+            <div className="rounded-xl overflow-hidden">
+              <Image
+                src="/image03.webp"
+                alt="最新技術スタックで構築されたWebサイトのイメージ"
+                width={1456}
+                height={816}
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
         </div>
