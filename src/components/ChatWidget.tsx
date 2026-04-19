@@ -46,15 +46,21 @@ export default function ChatWidget() {
             <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
           </svg>
         ) : (
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path
-              d="M21 12a8 8 0 0 1-11.6 7.15L4 20l1-4.4A8 8 0 1 1 21 12Z"
-              stroke="currentColor"
-              strokeWidth="1.7"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <span className="flex flex-col items-center leading-none gap-0.5">
+            <svg width="22" height="20" viewBox="0 0 24 22" fill="none" aria-hidden="true">
+              {/* アンテナ */}
+              <line x1="12" y1="0" x2="12" y2="3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <circle cx="12" cy="0" r="1.2" fill="currentColor" />
+              {/* 顔の外枠 */}
+              <rect x="2" y="3" width="20" height="15" rx="3" stroke="currentColor" strokeWidth="1.8" />
+              {/* 目 */}
+              <circle cx="8.5" cy="10" r="1.8" fill="currentColor" />
+              <circle cx="15.5" cy="10" r="1.8" fill="currentColor" />
+              {/* 口 */}
+              <path d="M8.5 14.5h7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+            <span className="text-[9px] font-bold tracking-widest">AI</span>
+          </span>
         )}
       </button>
 
