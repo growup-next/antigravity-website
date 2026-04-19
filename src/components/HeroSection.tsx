@@ -63,7 +63,7 @@ export default function HeroSection() {
         <div className="mt-14 animate-on-scroll animate-delay-400">
           <p className="text-xs text-neutral-600 uppercase tracking-widest mb-6">Powered by</p>
           <div className="overflow-hidden">
-            <div className="flex animate-marquee whitespace-nowrap">
+            <div className="flex w-max animate-marquee">
               {[...Array(2)].map((_, set) => (
                 <div key={set} className="flex items-center gap-14 pr-14 shrink-0">
                   {/* Antigravity */}
