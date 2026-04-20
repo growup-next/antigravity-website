@@ -29,7 +29,7 @@ export default function Navigation() {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -46,7 +46,7 @@ export default function Navigation() {
 
         {/* Mobile Hamburger */}
         <button
-          className="md:hidden flex flex-col gap-[5px] p-2"
+          className="lg:hidden flex flex-col gap-[5px] p-2"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="メニューを開く"
         >
@@ -71,7 +71,7 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 py-4 px-6 bg-neutral-900 border-b border-white/10">
+        <div className="lg:hidden absolute top-16 left-0 right-0 py-4 px-6 bg-neutral-900 border-b border-white/10">
           {navLinks.map((link) => (
             <a
               key={link.href}

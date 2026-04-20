@@ -11,7 +11,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 const FluidBackground = dynamic(
-  () => import("@/components/FluidBackground")
+  () => import("@/components/UnicornBackground")
 );
 const SimulatorSection = dynamic(
   () => import("@/components/SimulatorSection")
