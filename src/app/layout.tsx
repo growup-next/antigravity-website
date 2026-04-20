@@ -14,6 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://web-design.growup-next.com"),
   title: "ZeroG Web — AIエージェントが、あなたの専属Webチームに",
   description:
     "5万円から、月額0円。AIエージェントが制作から日々の更新までをシームレスにアシスト。圧倒的な低価格とスピードで、高品質なWebサイトを実現します。",
