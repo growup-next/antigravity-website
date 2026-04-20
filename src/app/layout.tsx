@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
+import Script from "next/script";
 import "./globals.css";
 
 const ChatWidget = dynamic(() => import("@/components/ChatWidget"));
@@ -28,6 +29,18 @@ export default function RootLayout({
       <body className="antialiased overflow-x-hidden">
         {children}
         <ChatWidget />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1DRPS5D41H"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1DRPS5D41H');
+          `}
+        </Script>
       </body>
     </html>
   );
