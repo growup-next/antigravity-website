@@ -24,7 +24,7 @@ export default function HeroSection() {
           <br />
           <span className="text-blue-400">AIエージェント</span>が、
           <br className="lg:hidden" />
-          あなたの専属Webチームに。
+          あなたのWeb担当者に。
         </h1>
 
         {/* Sub Headline */}
