@@ -5,27 +5,39 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "AIによる自律開発",
+    badge: "プロのディレクターが担当",
+    badgeColor: "bg-blue-500/15 text-blue-400 ring-1 ring-blue-500/30",
+    duration: "目安 0.5日",
+    title: "ヒアリング＆サイト設計",
     description:
-      "ヒアリングしたご要望に基づき、AIが最適なデザインとプログラムコードを瞬時に書き上げます。人間が数日かけて行うコーディングを数分で終えるため、ヒューマンエラーや認識のズレが入り込む余地を最小限に抑えます。",
+      "ビジネスの課題やオーナー様の想いを、経験豊富なディレクターが直接伺います。その内容を基に、AIの能力を最大限に引き出すための強固なサイト設計図（DESIGN.md）を作成します。",
   },
   {
     number: "02",
-    title: "ビジネス機能の連携",
+    badge: "ディレクター × AIの共創",
+    badgeColor: "bg-purple-500/15 text-purple-400 ring-1 ring-purple-500/30",
+    duration: "目安 1.5日",
+    title: "AIハイブリッド構築",
     description:
-      "「動く従業員」として機能させるため、お問い合わせフォームやブログ機能などのビジネスツールをプロの手で確実につなぎ込みます。",
+      "作成した設計図を基に、ディレクターがAIと高度な壁打ちを実施。AIの圧倒的な処理速度を活かし、プロ品質のデザインとプログラムコードを一気に組み上げます。ヒューマンエラーを排除し、コストと時間を劇的に圧縮します。",
   },
   {
     number: "03",
-    title: "自動デプロイ",
+    badge: "プロのディレクターが担当",
+    badgeColor: "bg-blue-500/15 text-blue-400 ring-1 ring-blue-500/30",
+    duration: "目安 1.0日",
+    title: "最終調整・デプロイ",
     description:
-      "完成したサイトはボタン一つで世界中に公開されます。独自ドメインの設定や、セキュリティ対策（SSL）も、AIの手順によって完璧にセットアップされます。",
+      "完成したサイトをプロの視点で厳格にチェック。お問い合わせフォームなどの機能連携、独自ドメインの設定、セキュリティ対策（SSL）を完璧にセットアップし、ボタン一つで世界中に公開します。",
   },
   {
     number: "04",
-    title: "アカウント譲渡",
+    badge: "安心のサポート",
+    badgeColor: "bg-green-500/15 text-green-400 ring-1 ring-green-500/30",
+    duration: "納品時",
+    title: "アカウント譲渡＆運用レクチャー",
     description:
-      "制作専用のGoogleアカウントを新規作成し、全サービスの権限を集約。納品時にアカウントごとお渡しします。「サイトを人質に取られる」不自由さとは無縁です。",
+      "サイトの所有権は100%お客様にお渡しします。さらに、納品時にはAI専属デジタル秘書への「指示の出し方（プロンプトのコツ）」を丁寧にレクチャーいたします（基本料金内）。ITが苦手な方でも、その日からご自身で簡単にサイトを更新できるようになります。",
   },
 ];
 
@@ -47,7 +59,7 @@ export default function WorkflowSection() {
             });
           }
         },
-        { threshold: 0.5 }
+        { threshold: 0.4 }
       );
       observer.observe(el);
       return observer;
@@ -62,19 +74,22 @@ export default function WorkflowSection() {
     <section id="workflow" className="bg-black/20 border-t border-white/5">
       <div className="section-container py-24">
         {/* Section Header */}
-        <div className="text-center mb-6 animate-on-scroll">
+        <div className="text-center mb-4 animate-on-scroll">
           <p className="text-xs font-medium tracking-wide text-neutral-500 uppercase mb-3">
             制作ワークフロー
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
-            AIと人の共創で、
+            AIとプロの共創で、
             <br />
-            最短3日で完成。
+            最短3日の超速ローンチ。
           </h2>
-          <p className="text-lg text-neutral-400 leading-relaxed max-w-xl mx-auto">
+          <p className="text-lg text-neutral-400 leading-relaxed max-w-xl mx-auto mb-4">
             無駄な会議や複雑な確認作業を極限まで排除。
             AIとプロのディレクターが連携する独自の4ステップで、
             ご相談から驚異的なスピードでサイトを完成させます。
+          </p>
+          <p className="text-sm text-neutral-500 max-w-xl mx-auto">
+            ※ 上記はオンラインでのヒアリングがスムーズに完了した場合の最短スケジュールです。要件の規模や打ち合わせ手法により柔軟に調整いたします。
           </p>
         </div>
 
@@ -87,12 +102,12 @@ export default function WorkflowSection() {
                 Process
               </p>
               <h3 className="text-2xl font-medium text-white mb-4">
-                4つのステップで、
+                プロが設計し、
                 <br />
-                完全な自由を。
+                AIが高速に構築。
               </h3>
               <p className="text-sm text-neutral-400 leading-relaxed">
-                AIの圧倒的なスピードと、人間のきめ細やかさを組み合わせたワークフロー。
+                人間のきめ細やかな設計とAIの圧倒的スピードを組み合わせた、ZeroG Web独自のハイブリッドワークフロー。
               </p>
             </div>
           </div>
@@ -124,10 +139,28 @@ export default function WorkflowSection() {
                   </div>
 
                   {/* Content */}
-                  <div className="pb-10">
-                    <p className="text-xs font-semibold tracking-wide text-blue-400 uppercase mb-1">
-                      STEP {step.number}
-                    </p>
+                  <div className="pb-10 flex-1 min-w-0">
+                    {/* STEP label + badge + duration */}
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
+                      <p className="text-xs font-semibold tracking-wide text-blue-400 uppercase">
+                        STEP {step.number}
+                      </p>
+                      <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${step.badgeColor}`}>
+                        {step.badge}
+                      </span>
+                    </div>
+
+                    {/* Duration */}
+                    <div className="flex items-center gap-1.5 mb-2">
+                      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" className="text-neutral-500 flex-shrink-0">
+                        <circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" strokeWidth="1.2" />
+                        <path d="M6.5 3.5V6.5L8.5 8" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+                      </svg>
+                      <span className="text-sm font-semibold text-neutral-300">
+                        {step.duration}
+                      </span>
+                    </div>
+
                     <h3 className="text-xl font-medium text-white mb-2">
                       {step.title}
                     </h3>
@@ -139,21 +172,6 @@ export default function WorkflowSection() {
               );
             })}
           </div>
-        </div>
-
-        {/* Highlight: クリーン・スレート */}
-        <div className="glass-card p-8 md:p-12 text-center mt-12 animate-on-scroll">
-          <p className="text-xs font-semibold tracking-wide text-blue-400 uppercase mb-3">
-            STEP 04 のポイント
-          </p>
-          <h3 className="text-2xl font-medium text-white mb-4">
-            「クリーン・スレート」型の納品
-          </h3>
-          <p className="text-sm text-neutral-400 leading-relaxed max-w-xl mx-auto">
-            プロセスの透明性を確保し、完成と同時に
-            「お客様が100%の権利を持つ資産」として引き渡します。
-            修正のたびに費用が発生する従来型の不自由さは、一切ありません。
-          </p>
         </div>
       </div>
     </section>
