@@ -1,6 +1,6 @@
 const cases = [
   {
-    name: "ONE by ONE",
+    name: "株式会社 ONE by ONE",
     type: "コーポレートサイト",
     typeColor: "bg-blue-500/15 text-blue-400 ring-1 ring-blue-500/30",
     aiPoints: [
@@ -12,7 +12,7 @@ const cases = [
       "事業の強みと想いをヒアリングし、ターゲットに刺さる構成を設計",
       "競合との差別化ポイントを整理し、伝わる言葉に落とし込む",
     ],
-    url: "https://one-by-one.growup-next.com",
+    url: "https://www.1-by-1.jp/",
     gradient: "from-blue-900/20 to-purple-900/20",
     borderColor: "hover:border-blue-500/30",
   },
@@ -29,7 +29,7 @@ const cases = [
       "専門家コミュニティとしての信頼感と親しみやすさのバランスを設計",
       "新規会員獲得を意識した参加導線と情報構造を整備",
     ],
-    url: "https://ktaai.growup-next.com",
+    url: "https://kyoto-tax-ai-lab.kai-design.net/",
     gradient: "from-green-900/20 to-teal-900/20",
     borderColor: "hover:border-green-500/30",
   },

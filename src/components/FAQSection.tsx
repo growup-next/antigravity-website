@@ -87,7 +87,7 @@ export default function FAQSection() {
               return (
                 <div
                   key={i}
-                  className={`glass-card overflow-hidden transition-colors animate-on-scroll ${isOpen ? "border-blue-500/20" : "hover:border-white/12"}`}
+                  className={`glass-card overflow-hidden transition-colors ${isOpen ? "border-blue-500/20" : "hover:border-white/12"}`}
                 >
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : i)}
