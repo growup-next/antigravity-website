@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const desktopLinks = [
   { label: "こんな方に", href: "#targets" },
-  { label: "サービスとは", href: "#intro" },
+  { label: "サービス紹介", href: "#intro" },
   { label: "ディレクター", href: "#director" },
   { label: "料金", href: "#simulator" },
   { label: "制作実績", href: "#cases" },
@@ -15,7 +15,7 @@ const desktopLinks = [
 
 const mobileLinks = [
   { label: "こんな方に", href: "#targets" },
-  { label: "ZeroG Webとは", href: "#intro" },
+  { label: "サービス紹介", href: "#intro" },
   { label: "ディレクターについて", href: "#director" },
   { label: "制作の流れ", href: "#workflow" },
   { label: "月額¥0の仕組み", href: "#infra" },

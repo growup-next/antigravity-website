@@ -31,7 +31,7 @@ export default function IntroSection() {
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20 animate-on-scroll">
           <p className="text-xs font-medium tracking-wide text-neutral-500 uppercase mb-3">
-            なぜ今、AIなのか
+            サービス紹介
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
             Webサイト制作の常識を、AIが覆す。
