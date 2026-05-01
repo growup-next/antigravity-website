@@ -80,6 +80,9 @@ export default function SimulatorSection() {
                     <div className="text-sm text-neutral-500 mt-1">
                       レスポンシブデザイン・SEO基本設定込み
                     </div>
+                    <div className="text-xs text-neutral-500 mt-2">
+                      ※ 電話番号やメールアドレスのリンク設置は基本プラン内で行えます
+                    </div>
                   </div>
                   <div className="text-2xl font-bold text-white whitespace-nowrap">
                     ¥{formatPrice(BASE_PRICE)}
