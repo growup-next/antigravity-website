@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function DirectorSection() {
   const credentials = [
     {
@@ -62,17 +64,20 @@ export default function DirectorSection() {
             {/* Profile Card */}
             <div className="glass-card p-8 animate-on-scroll">
               <div className="flex items-start gap-5 mb-6">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500/30 to-purple-500/30 border border-white/10 flex items-center justify-center flex-shrink-0">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" className="text-blue-300">
-                    <path d="M16 4C10.48 4 6 8.48 6 14s4.48 10 10 10 10-4.48 10-10S21.52 4 16 4z" stroke="currentColor" strokeWidth="1.5" />
-                    <path d="M8 26c1.5-2 4.5-3.5 8-3.5s6.5 1.5 8 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                  </svg>
+                <div className="w-16 h-16 rounded-full overflow-hidden border border-white/10 flex-shrink-0">
+                  <Image
+                    src="/kyo-miyagi.jpg"
+                    alt="宮城 京"
+                    width={64}
+                    height={64}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <div className="text-xs font-medium tracking-wide text-blue-400 uppercase mb-1">
-                    代表ディレクター
+                    Webディレクター
                   </div>
-                  <div className="text-xl font-semibold text-white">宮城 恭</div>
+                  <div className="text-xl font-semibold text-white">宮城 京</div>
                   <div className="text-sm text-neutral-500 mt-0.5">
                     GROW UP NEXT 代表
                   </div>
