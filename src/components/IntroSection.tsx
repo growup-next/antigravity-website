@@ -41,7 +41,7 @@ export default function IntroSection() {
           <p className="text-lg text-neutral-400 leading-relaxed max-w-xl mx-auto">
             これまでプロ品質のWebサイトを持つには、
             高い壁が3つありました。
-            AI技術の飛躍的な進歩が、その常識を劇的に塗り替えます。
+            プロのディレクションとAI技術の組み合わせが、その常識を塗り替えます。
           </p>
           <div className="mt-10 rounded-2xl overflow-hidden max-w-2xl mx-auto">
             <Image
@@ -85,11 +85,12 @@ export default function IntroSection() {
         <div className="max-w-2xl mx-auto animate-on-scroll">
           <p className="text-lg text-neutral-300 leading-relaxed mb-6">
             従来は「人の手」が数週間かけて行っていた設計やプログラミングを、
-            AIが自律的に、かつ瞬時に処理する仕組みを構築しました。
+            プロのディレクターの設計力とAIの処理速度を組み合わせることで、
+            品質を落とさず大幅に効率化しました。
           </p>
           <p className="text-lg text-neutral-300 leading-relaxed mb-6">
             ITへの苦手意識がある方もご安心ください。
-            AIが裏側の複雑な仕組みをすべて肩代わりするため、
+            ディレクターがヒアリングで「何が必要か」を整理した上で進めるため、
             オーナー様は「管理に追われる時間」から解放され、
             <strong className="text-white">本業に集中できる時間</strong>を取り戻せます。
           </p>

@@ -21,7 +21,7 @@ function getReduceMotionServerSnapshot() {
 
 const USER_MSG = "春のキャンペーン用に、桜の画像に変更して";
 const AI_REPLY =
-  "承知しました。トップページのヒーロー画像を桜の画像に変更し、キャンペーン情報を追加しました。ご確認ください。";
+  "承知しました。トップページのヒーロー画像を桜のビジュアルに変更し、春のキャンペーン告知をファーストビューに追加しました。内容をご確認ください。";
 
 const TYPE_INTERVAL_MS = 80;
 const TYPE_DURATION_MS = USER_MSG.length * TYPE_INTERVAL_MS;
@@ -31,6 +31,15 @@ const RESET_START_MS = 9500;
 const CYCLE_MS = 10000;
 
 type Phase = "typing" | "thinking" | "switching" | "responded" | "reset";
+
+const updateExamples = [
+  "季節キャンペーンの追加",
+  "ヒーロー画像の差し替え",
+  "営業時間・定休日の変更",
+  "料金表・メニューの修正",
+  "お知らせ文の追加",
+  "CTAボタンの文言変更",
+];
 
 export default function AiAssistantSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -112,14 +121,14 @@ export default function AiAssistantSection() {
             納品後の更新体験
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
-            日本語で指示するだけ。
+            公開後の更新も、
             <br />
-            操作マニュアルは不要です。
+            チャットで依頼するだけ。
           </h2>
           <p className="text-lg text-neutral-400 leading-relaxed max-w-xl mx-auto">
-            ZeroG Webの真の価値は、納品後にあります。
-            サイトは「作ってから」が本番。
-            制作を担当したAIエージェントが、あなたの専属デジタル秘書になります。
+            「春のキャンペーン用に、桜の画像に変更して」と入力すれば、
+            AIがトップページのヒーロー画像や告知文を更新。
+            専門知識がなくても、季節の告知・料金変更・お知らせ追加を自分で行えます。
           </p>
         </div>
 
@@ -202,8 +211,29 @@ export default function AiAssistantSection() {
           </div>
         </div>
 
+        {/* できること list */}
+        <div className="max-w-3xl mx-auto mb-16 animate-on-scroll animate-delay-200">
+          <p className="text-xs font-semibold tracking-wide text-neutral-500 uppercase text-center mb-6">
+            こんな更新をチャットで依頼できます
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {updateExamples.map((example) => (
+              <div
+                key={example}
+                className="glass-card px-4 py-3 flex items-center gap-2.5"
+              >
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="text-blue-400 flex-shrink-0">
+                  <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1.2" />
+                  <path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span className="text-sm text-neutral-300">{example}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* 2-column benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto animate-on-scroll animate-delay-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto animate-on-scroll animate-delay-300">
           <div className="glass-card p-8 group hover:border-blue-500/30 transition-colors">
             <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-blue-400">

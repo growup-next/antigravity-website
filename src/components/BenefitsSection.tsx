@@ -16,7 +16,8 @@ export default function BenefitsSection() {
           </h2>
           <p className="text-lg text-neutral-400 leading-relaxed max-w-xl mx-auto">
             「AIが作るなら、品質はそれなりでは？」という心配は不要です。
-            最新のAIは人間が手作業で行うには細かすぎる最適化を、標準仕様として完璧に実行します。
+            プロのディレクターの最終確認と、AIの効率的な実装で、
+            品質とスピードを両立しています。
           </p>
           <div className="mt-10 rounded-2xl overflow-hidden max-w-2xl mx-auto">
             <Image
@@ -91,7 +92,7 @@ export default function BenefitsSection() {
               </h4>
               <p className="text-sm text-neutral-400 leading-relaxed">
                 AIが検索エンジン向けにサイトの構造を分かりやすく翻訳して伝えます。
-                特別な知識がなくても、公開直後からプロ水準の土俵で戦えます。
+                公開時点で必要な基本設定を整えた状態からスタートできます。
               </p>
             </div>
           </div>
@@ -101,7 +102,7 @@ export default function BenefitsSection() {
         <p className="text-lg text-neutral-400 leading-relaxed text-center mt-8 max-w-2xl mx-auto animate-on-scroll">
           「速くて、検索に見つかりやすい」。
           この基本性能が最初から備わっているため、
-          公開直後からプロ水準のスタートが切れます。
+          公開時点で必要な基本設定を整えた状態からスタートできます。
         </p>
       </div>
     </section>

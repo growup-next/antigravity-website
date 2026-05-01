@@ -152,6 +152,9 @@ export default function SimulatorSection() {
                     ))}
                 </div>
 
+                <div className="text-xs text-neutral-600 mb-4 leading-relaxed p-3 bg-white/3 rounded-lg border border-white/5">
+                  基本的なサイト運用では月額保守費を抑えられます。独自ドメイン費用・外部サービス料金等は別途必要な場合があります。
+                </div>
                 <div className="flex items-center gap-2 mb-6 text-sm text-blue-400">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5" />
@@ -166,6 +169,9 @@ export default function SimulatorSection() {
 
                 <p className="text-xs text-neutral-600 mt-4 text-center">
                   ※ 正式な見積もりはヒアリング後にご提示します
+                </p>
+                <p className="text-xs text-neutral-700 mt-3 text-center leading-relaxed">
+                  ※ 独自ドメイン費用、外部サービスの有料プラン、AIツール利用料などが別途必要になる場合があります
                 </p>
               </div>
             </div>

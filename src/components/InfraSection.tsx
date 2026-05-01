@@ -41,7 +41,7 @@ export default function InfraSection() {
           </h2>
           <p className="text-lg text-neutral-400 leading-relaxed max-w-xl mx-auto">
             最新の「メンテナンスフリーなモダン構造（サーバーレス構成）」を採用。
-            毎月のサーバー代や管理保守料という常識を過去のものにしました。
+            従来のような月額保守費を前提としない構成で制作します。
           </p>
         </div>
 
@@ -109,8 +109,11 @@ export default function InfraSection() {
         </div>
 
         {/* Bottom message */}
-        <p className="text-lg text-neutral-400 leading-relaxed text-center mt-12 max-w-2xl mx-auto animate-on-scroll">
-          ランニングコストを排除することは、小規模ビジネスにおいて最強の継続戦略。
+        <p className="text-sm text-neutral-600 text-center mt-8 max-w-2xl mx-auto animate-on-scroll leading-relaxed">
+          ※ 独自ドメイン費用、外部サービスの有料プラン、AIツール利用料、アクセス増加に伴う有料プラン移行などが必要になる場合があります。正式なお見積もり時に、必要な費用を明確にご説明します。
+        </p>
+        <p className="text-lg text-neutral-400 leading-relaxed text-center mt-6 max-w-2xl mx-auto animate-on-scroll">
+          月額保守費を抑えることは、小規模ビジネスにおける継続的な情報発信を支える重要な基盤です。
           浮いた予算を広告費や新商品の開発に回すことで、
           Webサイトは真の意味で「利益を生む資産」へと変わります。
         </p>
