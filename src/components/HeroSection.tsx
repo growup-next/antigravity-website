@@ -61,7 +61,7 @@ export default function HeroSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-10 border-t border-white/5 max-w-3xl mx-auto animate-on-scroll animate-delay-400">
           {[
             { value: "¥50,000〜", label: "初期費用" },
-            { value: "¥0", label: "月額費用" },
+            { value: "¥0", label: "月額保守費" },
             { value: "3日〜", label: "最短納期" },
             { value: "100%", label: "所有権お客様" },
           ].map((metric) => (

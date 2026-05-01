@@ -9,7 +9,7 @@ export default function InfraSection() {
     {
       title: "初期費用5万円からのスタート",
       description:
-        "基本プランは5万円（税込5.5万円）から。月額費用がかからないため、わずか数ヶ月運用するだけで、従来のサービスと比較して圧倒的なコストメリットが生まれます。",
+        "基本プランは5万円（税込5.5万円）から。月額保守費を前提としない構成のため、わずか数ヶ月運用するだけで、従来のサービスと比較して圧倒的なコストメリットが生まれます。",
       color: "green",
     },
     {
@@ -75,7 +75,7 @@ export default function InfraSection() {
             <div className="space-y-4">
               {[
                 { label: "初期費用", value: "5万円〜" },
-                { label: "月額費用", value: "¥0" },
+                { label: "月額保守費", value: "¥0" },
                 { label: "修正依頼", value: "AIに日本語で指示" },
                 { label: "所有権", value: "100%お客様" },
               ].map((row) => (

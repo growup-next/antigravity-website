@@ -59,7 +59,7 @@ export default function SimulatorSection() {
             その場で見積もり。
           </h2>
           <p className="text-sm text-neutral-400 max-w-xl mx-auto">
-            必要な機能を選ぶだけ。追加費用や月額費用は一切ありません。
+            必要な機能を選ぶだけで、制作費用の目安をその場で確認できます。
           </p>
         </div>
 
@@ -160,7 +160,7 @@ export default function SimulatorSection() {
                     <circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5" />
                     <path d="M5 8l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                  月額費用: ¥0
+                  月額保守費: ¥0
                 </div>
 
                 <a href="#contact" className="shiny-cta w-full text-center block">
