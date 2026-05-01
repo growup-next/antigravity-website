@@ -3,11 +3,28 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const navLinks = [
-  { label: "ZeroG Webとは", href: "#intro" },
-  { label: "ワークフロー", href: "#workflow" },
+const desktopLinks = [
+  { label: "こんな方に", href: "#targets" },
+  { label: "サービスとは", href: "#intro" },
+  { label: "ディレクター", href: "#director" },
   { label: "料金", href: "#simulator" },
-  { label: "品質", href: "#benefits" },
+  { label: "制作実績", href: "#cases" },
+  { label: "FAQ", href: "#faq" },
+  { label: "お問い合わせ", href: "#contact" },
+];
+
+const mobileLinks = [
+  { label: "こんな方に", href: "#targets" },
+  { label: "ZeroG Webとは", href: "#intro" },
+  { label: "ディレクターについて", href: "#director" },
+  { label: "制作の流れ", href: "#workflow" },
+  { label: "月額¥0の仕組み", href: "#infra" },
+  { label: "料金シミュレーター", href: "#simulator" },
+  { label: "制作実績", href: "#cases" },
+  { label: "制作タイプ別", href: "#business-types" },
+  { label: "品質・技術", href: "#benefits" },
+  { label: "AI更新機能", href: "#ai-assistant" },
+  { label: "よくある質問", href: "#faq" },
   { label: "お問い合わせ", href: "#contact" },
 ];
 
@@ -29,8 +46,8 @@ export default function Navigation() {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
+        <div className="hidden lg:flex items-center gap-6">
+          {desktopLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -72,7 +89,7 @@ export default function Navigation() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden absolute top-16 left-0 right-0 py-4 px-6 bg-neutral-900 border-b border-white/10">
-          {navLinks.map((link) => (
+          {mobileLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
