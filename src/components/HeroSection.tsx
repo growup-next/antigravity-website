@@ -38,7 +38,7 @@ export default function HeroSection() {
 
         {/* Sub Copy + CTA — delay-400 */}
         <div className="animate-on-scroll animate-delay-400">
-          <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mt-6 mb-10">
+          <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mt-6 mb-10 text-left">
             AIで誰でも簡単にサイトが作れる時代。だからこそ、「ビジネスの目的を達成できるか」「オーナーの想いが正しく伝わるか」という
             <span className="text-slate-100 font-semibold">本質的な設計力</span>が問われます。
             <br /><br />

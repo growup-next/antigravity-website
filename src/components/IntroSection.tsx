@@ -34,9 +34,7 @@ export default function IntroSection() {
             なぜ今、AIなのか
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
-            Webサイト制作の常識を、
-            <br />
-            AIが覆す。
+            Webサイト制作の常識を、AIが覆す。
           </h2>
           <p className="text-lg text-neutral-400 leading-relaxed max-w-xl mx-auto">
             これまでプロ品質のWebサイトを持つには、
