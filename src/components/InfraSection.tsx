@@ -3,7 +3,7 @@ export default function InfraSection() {
     {
       title: "「サーバー大家さん」からの卒業",
       description:
-        "従来のようにレンタルサーバーを借りる必要がありません。物理的なサーバー管理が不要なため、毎月の「固定費という名の税金」をゼロにできます。",
+        "従来のようにレンタルサーバーを借りる必要がありません。物理的なサーバー管理が不要なため、毎月の固定費を抑えやすく、必要なタイミングで情報発信を続けられます。",
       color: "blue",
     },
     {
@@ -15,7 +15,7 @@ export default function InfraSection() {
     {
       title: "精神的な自由",
       description:
-        "「月額がかかるから、成果が出るまで不安……」という心理的ハードルがなくなります。一度作ってしまえば、リスクなく長期的に情報を発信し続けることが可能です。",
+        "「月額がかかるから、成果が出るまで不安……」という心理的ハードルがなくなります。一度作ってしまえば、毎月の保守費を抑えながら長期的に情報を発信し続けやすくなります。",
       color: "purple",
     },
   ];
@@ -35,7 +35,7 @@ export default function InfraSection() {
             月額0円の仕組み
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
-            月額費用、
+            月額保守費、
             <br />
             <span className="text-blue-400">¥0</span>。
           </h2>
