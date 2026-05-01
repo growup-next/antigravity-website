@@ -7,39 +7,54 @@ export default function HeroSection() {
       </div>
 
       <div className="section-container w-full min-w-0 relative z-10 text-center pt-28 pb-16 md:pt-48 md:pb-32">
-        {/* Status Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 mb-8 animate-on-scroll">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400" />
+
+        {/* Dual Badges — delay-0 */}
+        <div className="flex flex-wrap justify-center gap-2 mb-8 animate-on-scroll">
+          <span className="bg-slate-800/80 border border-slate-700 text-amber-500 font-medium text-sm px-3 py-1 rounded-full backdrop-blur-sm">
+            初期費用5万円〜
           </span>
-          <span className="text-xs font-medium tracking-wide text-blue-400">
-            AIを活用した次世代Web制作
+          <span className="bg-slate-800/80 border border-slate-700 text-amber-500 font-medium text-sm px-3 py-1 rounded-full backdrop-blur-sm">
+            月額ランニングコスト 0円
           </span>
         </div>
 
-        {/* Main Headline */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto animate-on-scroll animate-delay-100">
-          5万円から。月額0円。
-          <br />
-          <span className="text-blue-400">AIエージェント</span>が、
-          <br className="lg:hidden" />
-          あなたのWeb担当者に。
+        {/* H1 — semantic single element, lines staggered via block spans */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight leading-tight max-w-5xl mx-auto">
+          {/* Line 1 — delay-0 */}
+          <span className="block animate-on-scroll">
+            <span className="text-blue-400 font-black">プロが目的を設計し、</span>
+            <span className="text-cyan-400 font-bold">AIが爆速で組み上げる。</span>
+          </span>
+          {/* Line 2 — delay-200 */}
+          <span className="block animate-on-scroll animate-delay-200 mt-2 mb-8">
+            <span className="font-extrabold text-slate-100">ビジネスの「</span>
+            <span className="font-extrabold text-amber-500">熱</span>
+            <span className="font-extrabold text-slate-100">」を逃がさない</span>
+            <span className="font-extrabold text-cyan-300 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)] hover:drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] transition-all duration-300 cursor-default">
+              次世代サイト制作。
+            </span>
+          </span>
         </h1>
 
-        {/* Sub Headline */}
-        <p className="text-lg md:text-xl text-neutral-400 leading-relaxed max-w-2xl mx-auto mb-10 animate-on-scroll animate-delay-200">
-          自律的に動くAIエージェントが、制作から日々の更新までをシームレスにアシスト。圧倒的な低価格とスピードで、ビジネスのアイデアを熱いうちに形にします。
-        </p>
+        {/* Sub Copy + CTA — delay-400 */}
+        <div className="animate-on-scroll animate-delay-400">
+          <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mt-6 mb-10">
+            AIで誰でも簡単にサイトが作れる時代。だからこそ、「ビジネスの目的を達成できるか」「オーナーの想いが正しく伝わるか」という
+            <span className="text-slate-100 font-semibold">本質的な設計力</span>が問われます。
+            <br /><br />
+            経験豊富な<span className="text-slate-100 font-semibold">プロのディレクター</span>が徹底したヒアリングで「勝てる設計図」を描き、AIを優秀な制作スタッフとして駆使することで、あなたのアイデアを熱いうちに（<span className="text-slate-100 font-semibold">最短3日</span>で）形にします。
+            <br /><br />
+            プロの品質と圧倒的なコストパフォーマンスを両立した、成果を生むWebパートナーを手に入れませんか。
+          </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-on-scroll animate-delay-300">
-          <a href="#simulator" className="shiny-cta">
-            <span>無料で見積もりする</span>
-          </a>
-          <a href="#intro" className="btn-outline">
-            詳しく見る
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#simulator" className="shiny-cta">
+              <span>無料で見積もりする</span>
+            </a>
+            <a href="#intro" className="btn-outline">
+              詳しく見る
+            </a>
+          </div>
         </div>
 
         {/* Credibility Metrics */}
@@ -81,6 +96,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
